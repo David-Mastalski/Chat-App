@@ -18,7 +18,7 @@ Chat App is an application that enables real-time messaging with "friends." The 
   - View unread messages
  
 ## How it's working?
-  The chat is an application written using JavaScript, Sass, and Gulp. The application's functionality is based on rendering and saving new messages in an array located in the js/data/conversationData.js file. ChatApp checks whether a written message was sent 20 minutes ago. If so, after sending a new message, ChatApp creates a new conversation, starting with rendering the current date and time.
+  The ChatApp is an application written using JavaScript, Sass, and Gulp. The application's functionality is based on rendering and saving new messages in an array located in the js/data/conversationData.js file. ChatApp checks whether a written message was sent 20 minutes ago. If so, after sending a new message, ChatApp creates a new conversation, starting with rendering the current date and time.
  
 ## Requirements 
 - _**Before using the application, make sure you meet the following requirements:**_
