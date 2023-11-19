@@ -1,0 +1,141 @@
+@use './base/resets' as *;
+@use './base/colors' as *;
+@use './base/typography' as *;
+@use './base/mixins' as *;
+
+@use './components/nav' as *;
+@use './components/chatsList' as *;
+@use './components/chat' as *;
+@use './components/sharedFile' as *;
+
+body{
+    background-color: $main-background-color;
+    color: $font-color;
+    font-family: $main-font;
+    min-height: 100dvh;
+    width: 100%;
+    position: relative;
+}
+
+#app{
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 95px 300px 1.4fr .6fr;
+}
+
+.img-container{
+    overflow: hidden;
+    img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+} 
+
+.section{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    max-height: 100dvh;
+
+    &__header{
+        border-bottom: 2px solid $border-grey;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+
+        &--backBtn{
+            background-color: rgb(238, 238, 238);
+            border: none;
+            border-radius: 5px;
+            color: rgb(149, 149, 149);
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+        }
+    }
+    &__innerHeader{
+        @include beetwenElement();
+        font-weight: $bold;
+        padding: 20px 0;
+        
+        p{
+            color: $grey;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.section-heading{
+    font-size: 1.8rem;
+}
+
+.userDetails{
+    text-align: center;
+    position: relative;
+    margin: 20px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__userPhoto{
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        margin-top: 20px;
+        position: relative;
+        overflow: visible !important;
+
+        img{
+            border-radius: 50%;
+        }
+        #userStatus{
+            background-color: $offline-red;
+            border: 2px solid $main-background-color;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            bottom: 7px;
+            right: 3px;
+        }
+        &.online #userStatus{
+            background-color: $online-green;
+        }
+    }
+    &__userName{
+        color: $font-color;
+        padding: 10px 0;
+        font-size: 1.9rem;
+        font-weight: $bold;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #app{
+        grid-template-columns: 100%;
+    }
+    .appNav,
+    .chat,
+    .sharedFile{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 850px){
+    #app{
+        grid-template-columns: auto 1fr;
+    }
+    .appNav,
+    .sharedFile{
+        display: none;
+    }
+    .chats{
+        width: 100%;
+    }
+}

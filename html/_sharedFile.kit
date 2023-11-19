@@ -1,0 +1,66 @@
+<section class="sharedFile section">
+    <header class="section__header">
+        <button class="section__header--backBtn"><i class="fa-solid fa-angle-left"></i></button>
+        <h3 class="section-heading">Shared File</h3>
+    </header>
+    <section class="scroll">
+        <div>
+            <div class="sharedFile__chatDetails userDetails">
+                <div class="wrapper">
+                    <div class="userDetails__userPhoto img-container">
+                        <img src="" class="userDetails__photo" alt="">
+                    </div>
+                    <p class="userDetails__userName chat__userName"></p>
+                </div>
+            </div>
+        </div>
+        <div class="typeFiles">
+            <input type="radio" id="all-files" name="files-type" class="files-type-inputs" value="all-types" checked>
+            <label for="all-files" class="typeFiles__catalog typeFiles__catalog--active">
+                <i class="fa-solid fa-folder catalog-icon"></i>
+                <p class="catalog-data">All Files <span id="all-files-count"></span></p>
+            </label>
+            <input type="radio" id="only-images" name="files-type" class="files-type-inputs" value="images">
+            <label for="only-images" class="typeFiles__catalog">
+                <i class="fa-solid fa-folder catalog-icon"></i>
+                <p class="catalog-data">Images <span id="images-files-count"></span></p>
+            </label>
+        </div>
+        <div>
+            <header class="section__innerHeader">
+                <p>Type Files</p>
+                <div class="chatsListOption">
+                    <button class="chatsListOption__btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </header> 
+            <div class="files files--all">
+                <ul class="files__list">
+                    <!-- <li class="file">
+                        <div class="file__icon file__icon--images">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div>
+                            <h4 class="file__title">Images</h4>
+                            <p class="file__data">153 Files, 474MB</p>
+                        </div>
+                        <button class="file__more-btn"><i class="fa-solid fa-angle-right"></i></button>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="files files--images">
+                <ul class="files__list">
+                    <li class="file">
+                        <div class="file__icon file__icon--images">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div>
+                            <h4 class="file__title">Images</h4>
+                            <p class="file__data file__data--filesImages"></p>
+                        </div>
+                        <button class="file__more-btn"><i class="fa-solid fa-angle-right"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

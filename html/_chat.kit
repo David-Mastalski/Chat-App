@@ -1,0 +1,18 @@
+<main class="chat">
+    <header class="chat__header">
+        <h2 class="section-heading chat__userName"></h2>
+        <div class="chatOptions">
+            <button class="chatOptions__btn chatOptions__btn--message">Message</button>
+            <button class="chatOptions__btn">Settings</button>
+        </div>
+    </header>
+    <div class="chat__wrapper"></div>
+    <form method="POST" class="chat__input" id="form">
+        <input type="text" id="newMessage" placeholder="Write your message..." autocomplete="off">
+        <div class="chatInputBtn">
+            <button type="button" class="chatInputBtn__btn"><i class="fa-solid fa-face-smile"></i></button>
+            <button type="button" class="chatInputBtn__btn"><i class="fa-solid fa-file"></i></button>
+            <button type="submit" class="chatInputBtn__btn chatInputBtn__btn--send"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </form>
+</main>

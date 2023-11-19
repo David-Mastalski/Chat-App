@@ -1,0 +1,118 @@
+@use '../base/colors' as *;
+@use '../base/typography' as *;
+@use '../base/mixins' as *;
+
+.sharedFile{
+    height: 100%;
+    width: 100%;
+    padding: 0 10px 20px 10px;
+}
+
+.typeFiles{
+    @include beetwenElement();
+
+    &__catalog{
+        background-color: $very-light-blue;
+        border-radius: 8px;
+        color: $grey;
+        cursor: pointer;
+        width: 47%;
+        padding: 15px;
+        font-weight: $bold;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.catalog-icon{
+    font-size: 2.2rem;
+    margin-right: 6px;
+    padding: 7px 0;
+}
+
+.catalog-data{
+    font-size: .9rem;
+    span{
+        display: block;
+        font-size: 2.3rem;
+        margin-top: -5px;
+    }
+}
+
+.files-type-inputs{
+    display: none;
+    visibility: hidden;
+    &:checked + label{
+        background-color: $transparent-green;
+        color: $green;
+    }
+}
+
+.files__list{
+    list-style-type: none;
+}
+
+.file{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 15px;
+
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+    &__icon{
+        @include centerElement();
+        border-radius: 6px;
+        height: 35px;
+        width: 35px;
+        font-size: 1.4rem;
+        
+        &--images{
+            background-color: $images-file-color;
+            color: $images-file-icon-color;
+        }
+        &--videos{
+            background-color: $videos-file-color;
+            color: $videos-file-icon-color; 
+        }
+        &--gifs{
+            background-color: $gifs-file-color;
+            color: $gifs-file-icon-color; 
+        }
+        &--pdf{
+            background-color: $pdf-file-color;
+            color: $pdf-file-icon-color; 
+        }
+        &--others{
+            background-color: $others-file-color;
+            color: $others-file-icon-color;  
+        }
+    }
+    &__title{
+        &::first-letter{
+            text-transform: uppercase;
+        }
+        &--pdf{
+            text-transform: uppercase;
+        }
+        font-size: 1.1rem;
+        font-weight: $bold;
+    }
+    &__data{
+        color: $grey;
+        font-weight: $semi-bold;
+    }
+    &__more-btn{
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+    }
+}
+
+.files--images{
+    display: none;
+}

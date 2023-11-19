@@ -1,0 +1,80 @@
+<section class="chats section">
+    <header class="section__header">
+        <button class="section__header--backBtn"><i class="fa-solid fa-angle-left"></i></button>
+        <h1 class="section-heading">Chat</h1>
+    </header>
+    <section class="scroll">
+        <div>
+            <div class="userDetails">
+                <div class="wrapper">
+                    <div class="userDetails__userPhoto img-container online">
+                        <img src="./dist/img/profile-img.jpg" alt="">
+                        <span id="userStatus"></span>
+                    </div>
+                    <p class="userDetails__userName">David Mastalski</p>
+                    <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <select id="changeStatus">
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chats__searchInput">
+                <input type="text" id="search-people" placeholder="Search">
+            </div>
+        </div>
+        <div class="chats__list">
+            <header class="section__innerHeader">
+                <p>Your chats</p>
+                <div class="chatsListOption">
+                    <button class="chatsListOption__btn chatsListOption__btn--addNew"><i class="fa-solid fa-plus"></i></button>
+                    <button class="chatsListOption__btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </header>
+            <div class="chats__list--listContainer">
+                <ul class="chatsList">
+                    <!-- <li class="chatsList__iteam chatsList__iteam--active">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img1.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Kamil Labudda</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">19:44</div>
+                    </li>
+                    <li class="chatsList__iteam">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img2.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Dawid Szczygieł</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">19:04</div>
+                    </li>
+                    <li class="chatsList__iteam">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img3.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Alicja Kmiecik</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">18:28</div>
+                    </li>
+                    <li class="chatsList__iteam">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img4.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Adrian Nowak</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">18:03</div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

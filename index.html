@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="icon" href="./dist/img/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5e7b60bd46.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="appNav">
+    <header class="appNav__logo img-container">
+        <img src="./dist/img/logo.png" alt="Logo">
+    </header>
+
+    <ul class="appNav__menuList">
+        <li class="appNav__menuList--iteam"><i class="fa-solid fa-house"></i></li>
+        <li class="appNav__menuList--iteam"><i class="fa-regular fa-bookmark"></i></li>
+        <li class="appNav__menuList--iteam active"><i class="fa-solid fa-user-group"></i></li>
+        <li class="appNav__menuList--iteam"><i class="fa-solid fa-chart-simple"></i></li>
+        <li class="appNav__menuList--iteam"><i class="fa-solid fa-gear"></i></li>
+    </ul>
+
+    <div class="appNav__userPhoto img-container">
+        <img src="../dist/img/profile-img.jpg" alt="User Photo">
+    </div>
+</nav>
+        <section class="chats section">
+    <header class="section__header">
+        <button class="section__header--backBtn"><i class="fa-solid fa-angle-left"></i></button>
+        <h1 class="section-heading">Chat</h1>
+    </header>
+    <section class="scroll">
+        <div>
+            <div class="userDetails">
+                <div class="wrapper">
+                    <div class="userDetails__userPhoto img-container online">
+                        <img src="./dist/img/profile-img.jpg" alt="">
+                        <span id="userStatus"></span>
+                    </div>
+                    <p class="userDetails__userName">David Mastalski</p>
+                    <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <select id="changeStatus">
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chats__searchInput">
+                <input type="text" id="search-people" placeholder="Search">
+            </div>
+        </div>
+        <div class="chats__list">
+            <header class="section__innerHeader">
+                <p>Your chats</p>
+                <div class="chatsListOption">
+                    <button class="chatsListOption__btn chatsListOption__btn--addNew"><i class="fa-solid fa-plus"></i></button>
+                    <button class="chatsListOption__btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </header>
+            <div class="chats__list--listContainer">
+                <ul class="chatsList">
+                    <!-- <li class="chatsList__iteam chatsList__iteam--active">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img1.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Kamil Labudda</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">19:44</div>
+                    </li>
+                    <li class="chatsList__iteam">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img2.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Dawid Szczygieł</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">19:04</div>
+                    </li>
+                    <li class="chatsList__iteam">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img3.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Alicja Kmiecik</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">18:28</div>
+                    </li>
+                    <li class="chatsList__iteam">
+                        <div class="chatsList__iteam--userPhoto img-container">
+                            <img src="./dist/img/profile-img4.jpg" alt="">
+                        </div>
+                        <div class="chatsList__iteam--content">
+                            <p class="userName">Adrian Nowak</p>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="chatsList__iteam--time">18:03</div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+        <main class="chat">
+    <header class="chat__header">
+        <h2 class="section-heading chat__userName"></h2>
+        <div class="chatOptions">
+            <button class="chatOptions__btn chatOptions__btn--message">Message</button>
+            <button class="chatOptions__btn">Settings</button>
+        </div>
+    </header>
+    <div class="chat__wrapper"></div>
+    <form method="POST" class="chat__input" id="form">
+        <input type="text" id="newMessage" placeholder="Write your message..." autocomplete="off">
+        <div class="chatInputBtn">
+            <button type="button" class="chatInputBtn__btn"><i class="fa-solid fa-face-smile"></i></button>
+            <button type="button" class="chatInputBtn__btn"><i class="fa-solid fa-file"></i></button>
+            <button type="submit" class="chatInputBtn__btn chatInputBtn__btn--send"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </form>
+</main>
+        <section class="sharedFile section">
+    <header class="section__header">
+        <button class="section__header--backBtn"><i class="fa-solid fa-angle-left"></i></button>
+        <h3 class="section-heading">Shared File</h3>
+    </header>
+    <section class="scroll">
+        <div>
+            <div class="sharedFile__chatDetails userDetails">
+                <div class="wrapper">
+                    <div class="userDetails__userPhoto img-container">
+                        <img src="" class="userDetails__photo" alt="">
+                    </div>
+                    <p class="userDetails__userName chat__userName"></p>
+                </div>
+            </div>
+        </div>
+        <div class="typeFiles">
+            <input type="radio" id="all-files" name="files-type" class="files-type-inputs" value="all-types" checked>
+            <label for="all-files" class="typeFiles__catalog typeFiles__catalog--active">
+                <i class="fa-solid fa-folder catalog-icon"></i>
+                <p class="catalog-data">All Files <span id="all-files-count"></span></p>
+            </label>
+            <input type="radio" id="only-images" name="files-type" class="files-type-inputs" value="images">
+            <label for="only-images" class="typeFiles__catalog">
+                <i class="fa-solid fa-folder catalog-icon"></i>
+                <p class="catalog-data">Images <span id="images-files-count"></span></p>
+            </label>
+        </div>
+        <div>
+            <header class="section__innerHeader">
+                <p>Type Files</p>
+                <div class="chatsListOption">
+                    <button class="chatsListOption__btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </header> 
+            <div class="files files--all">
+                <ul class="files__list">
+                    <!-- <li class="file">
+                        <div class="file__icon file__icon--images">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div>
+                            <h4 class="file__title">Images</h4>
+                            <p class="file__data">153 Files, 474MB</p>
+                        </div>
+                        <button class="file__more-btn"><i class="fa-solid fa-angle-right"></i></button>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="files files--images">
+                <ul class="files__list">
+                    <li class="file">
+                        <div class="file__icon file__icon--images">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div>
+                            <h4 class="file__title">Images</h4>
+                            <p class="file__data file__data--filesImages"></p>
+                        </div>
+                        <button class="file__more-btn"><i class="fa-solid fa-angle-right"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+    </div>
+
+    <!-- <script type="module" src="../src/js/data/conversationData.js"></script>
+    <script type="module" src="../src/js/app.js"></script> -->
+
+    <script type="module" src="../dist/js/data/conversationData.js"></script>
+    <script type="module" src="../dist/js/app.js"></script>
+</body>
+</html>

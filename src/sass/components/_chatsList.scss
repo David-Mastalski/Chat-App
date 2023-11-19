@@ -1,0 +1,113 @@
+@use '../base/colors' as *;
+@use '../base/typography' as *;
+@use '../base/mixins' as *;
+
+.scroll{
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.chats{
+    padding: 0 10px;
+
+    &__searchInput{
+        input{
+            background-color: rgb(242, 242, 242);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            padding: 5px 12px;
+            width: 100%;
+            outline: none;
+            &:focus{
+                border: 2px solid $green;
+            }
+            &::placeholder{
+                color: rgb(117, 117, 117);
+                font-weight: $regular;
+            }
+        }
+    }
+}
+
+.edit-btn{
+    background-color: transparent;
+    border: none;
+    color: $grey;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+select{
+    background-color: $transparent-green;
+    border: 1px solid $green;
+    border-radius: 8px;
+    color: $green;
+    padding: 2px 20px;
+    font-family: $main-font;
+    font-weight: $bold;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.chatsListOption__btn{
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    color: $grey;
+    height: 30px;
+    width: 30px;
+    &--addNew{
+        background-color: $transparent-green;
+        color: $green;
+    }
+}
+
+.chatsList{
+    list-style-type: none;
+    &__iteam{
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        padding: 15px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 35px 1fr auto;
+        &--active{
+            background-color: $very-light-blue;
+        }
+        &--userPhoto{
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+        }
+        &--content{
+            margin-left: 10px;
+            padding: 3px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--time{
+            justify-self: flex-end;
+            font-weight: $bold;
+            color: $green;
+        }
+        &--message{
+            font-weight: $bold;
+        }   
+    }
+}
+
+.userName{
+    color: $font-color;
+    font-weight: $bold;
+    font-size: 1.2rem;
+}

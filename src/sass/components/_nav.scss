@@ -1,0 +1,59 @@
+@use '../base/mixins' as *;
+@use '../base/colors' as *;
+
+.appNav{
+    border-right: 2px solid $border-grey;
+    padding: 10px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        width: 50px;
+    }
+
+    &__userPhoto{
+        border: 2px solid rgba(7, 161, 25, 0.61);
+        border-radius: 50%;
+        width: 37px;
+    }
+
+    &__menuList{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &--iteam{
+            @include centerElement();
+            border-radius: 12px;
+            color: $grey;
+            // color: black;
+            cursor: pointer;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            transition: color .3s;
+            &:hover{
+                color: $green;
+            }
+            &.active{
+                background-color: $transparent-green;
+                color: $green;
+                &::before{
+                    background-color: $green;
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    content: '';
+                    height: 100%;
+                    width: 4px;
+                    position: absolute;
+                    right: -24px;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
