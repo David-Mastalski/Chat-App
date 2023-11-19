@@ -34,4 +34,7 @@ Chat App is an application that enables real-time messaging with "friends." The 
  ## Usage
 
 ## Demo from Memory Game
-<img src="https://github.com/David-Mastalski/Chat-App/blob/main/demo/video1.gif" alt="Chat-App" width="100%">
+<img src="https://github.com/David-Mastalski/Chat-App/blob/main/demo/demo.png" alt="Chat-App" width="100%">
+
+<img align="left" src="https://github.com/David-Mastalski/Chat-App/blob/main/demo/video1.gif" alt="Chat-App" width="50%">
+<img align="right" src="https://github.com/David-Mastalski/Chat-App/blob/main/demo/video2.gif" alt="Chat-App" width="50%">
