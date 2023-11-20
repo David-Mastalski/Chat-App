@@ -7,7 +7,7 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg" alt="gulp" width="40" height="40"/>
 </p>
 
-Chat App is an application that enables real-time messaging with "friends." The application was created using Vanilla JS, Sass, Gulp, and HTML.
+Chat-App is an application that enables real-time messaging with "friends." The application was created using Vanilla JS, Sass, Gulp, and HTML.
 
 ## Features 
 - _**Message Sending**_
